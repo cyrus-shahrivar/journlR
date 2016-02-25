@@ -1,10 +1,21 @@
-<p>
+<h1>Journal Entry</h1>
+
+<h2>
   <strong>Title:</strong>
   <%= @article.title %>
-</p>
+</h2>
+
+<h5>
+  <strong>Updated At: </strong>
+  <%= @article.updated_at %>
+</h5>
+
+<h5>
+  <strong>Created At: </strong>
+  <%= @article.created_at %>
+</h5>
 
 <p>
-  <strong>Text:</strong>
   <%= @article.text %>
 </p>
 

@@ -1,4 +1,4 @@
-<h1>Listing articles</h1>
+<h1>My Journal Entries</h1>
 
 <table>
   <tr>
@@ -6,11 +6,10 @@
     <th>Text</th>
   </tr>
 <%= link_to 'Home', root_path %> |
-<%= link_to 'Add Article', new_user_article_path %>
+<%= link_to 'Add Entry', new_user_article_path %>
   <% @articles.each do |article| %>
     <tr>
       <td><%= article.title %></td>
-      <td><%= article.text %></td>
       <td><%= link_to 'Show', "/users/#{@user.id}/articles/#{article.id}" %></td>
       <td><%= link_to 'Edit', "/users/#{@user.id}/articles/#{article.id}/edit" %></td>
       <td><%= link_to 'Destroy', "/users/#{@user.id}/articles/#{article.id}",
