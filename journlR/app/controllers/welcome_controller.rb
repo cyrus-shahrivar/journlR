@@ -3,5 +3,7 @@ class WelcomeController < ApplicationController
 
   def index
     @current_uri = request.env['PATH_INFO']
+    @user = User.find_by(params[:user_id])
   end
+
 end

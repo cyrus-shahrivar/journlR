@@ -3,8 +3,7 @@
       <% if logged_in %>
 
           <%= link_to 'Logout', logout_path, :method => :delete %>
-          <%= link_to 'My Journal', controller: 'articles'  %>
-          <%= link_to 'New Article', new_article_path %>
+          <%= link_to 'My Journal', user_articles_path(@user)  %>
       <% else %>
           <%= link_to "Login", login_path %> |
           <%= link_to "Sign Up", new_user_path%>

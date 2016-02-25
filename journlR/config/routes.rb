@@ -4,10 +4,8 @@ Rails.application.routes.draw do
   get '/login'  => 'sessions#new'
   post '/login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
-  resources :users
-
-  resources :articles do
-    resources :comments
+  resources :users do
+    resources :articles 
   end
 
   root 'welcome#index'
